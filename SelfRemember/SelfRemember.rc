@@ -1,0 +1,392 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SelfRemember.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SelfRemember.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// IDR_EXE
+//
+
+IDR_EXE_RUN_CMD         IDR_EXE                 "res\\RunCmd.exe"
+IDR_CONFIG              IDR_EXE                 "res\\SelfRemember.ini"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_POPUP MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "Delete All Selected Row",     ID_POPUP_DELETEALLSELECTEDROW
+        MENUITEM "Insert Copy",                 ID_POPUP_INSERTCOPY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About TinyDB"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "TinyDB Version 1.0",IDC_STATIC_VERSION,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Developper : ∑Î¿˚√Ò ( Sail Feng,  mailflm@163.com )",IDC_STATIC_DEVELOPPER,40,25,188,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_DIALOG_CREATE_TABLE DIALOGEX 0, 0, 400, 254
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Create Table"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_TABLE_NAME,65,20,63,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEADER_HEIGHT,65,39,63,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ROW_HEIGHT,65,57,63,14,ES_AUTOHSCROLL
+    CONTROL         "Enable Filter",IDC_CHECK_ENABLE_FILTER,"Button",BS_AUTOCHECKBOX,139,23,55,10
+    CONTROL         "Select Then Edit",IDC_CHECK_LEFT_CLICK_CELL_TO_EDIT,
+                    "Button",BS_AUTOCHECKBOX,139,42,67,10
+    CONTROL         "Highlight Changed Cell",IDC_CHECK_HIGHLIGHT_CHANGED_CELL,
+                    "Button",BS_AUTOCHECKBOX,139,60,87,10
+    CONTROL         "Allow Multi Selection",IDC_CHECK_ALLOW_MULTI_SELECTION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,251,23,80,10
+    CONTROL         "Edit First Cell After New Row Added",IDC_CHECK_AUTO_EDIT_FIRST,
+                    "Button",BS_AUTOCHECKBOX,251,42,131,10
+    DEFPUSHBUTTON   "OK",IDOK,281,233,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,343,233,50,14
+    GROUPBOX        "Table Property",IDC_STATIC_TABLE_PROPERTY,7,5,386,75
+    CONTROL         "",IDC_LIST_COLUMN,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,108,386,116
+    LTEXT           "Column Definition",IDC_STATIC_COLUMN_DEFINITION,9,94,56,8
+    LTEXT           "Table Name",IDC_STATIC_TABLE_NAME,14,22,38,8
+    LTEXT           "Header Height",IDC_STATIC_HEADER_HEIGHT,14,40,47,8
+    LTEXT           "Row Height",IDC_STATIC_ROW_HEIGHT,14,58,38,8
+    CONTROL         "Edit Next Cell After Hit Retun",IDC_CHECK_AUTO_EDIT_NEXT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,251,60,109,10
+END
+
+IDD_DIALOG_LOGIN DIALOGEX 0, 0, 163, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Login"
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_USERNAME,52,21,95,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD,52,41,95,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,25,74,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,89,74,50,14
+    LTEXT           "Username: ",IDC_STATIC_USERNAME,13,25,36,8
+    LTEXT           "Password: ",IDC_STATIC_PASSWORD,13,43,35,8
+    GROUPBOX        "",IDC_STATIC,7,7,149,59
+END
+
+IDD_DIALOG_USER_OPTION DIALOGEX 0, 0, 300, 234
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User Option"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_USER_OPTION,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,286,198
+    PUSHBUTTON      "OK",IDOK,175,213,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,243,213,50,14
+END
+
+IDD_DIALOG_CHANGE_PASSWORD DIALOGEX 0, 0, 177, 105
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change Password"
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_OLD_PASSWORD,74,17,89,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NEW_PASSWORD,74,35,89,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CONFIRM_NEW_PASSWORD,74,53,89,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,25,83,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,101,83,50,14
+    LTEXT           "Old Password:",IDC_STATIC_OLD_PASSWORD,11,18,46,8
+    LTEXT           "New Password:",IDC_STATIC_NEW_PASSWORD,11,37,50,8
+    LTEXT           "Confirm Password:",IDC_STATIC_CONFIRM_PASSWORD,11,56,60,8
+    GROUPBOX        "",IDC_STATIC,7,5,163,70
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_DIALOG_CREATE_TABLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 393
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 247
+    END
+
+    IDD_DIALOG_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DIALOG_USER_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_DIALOG_CHANGE_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SELFREMEMBER_DIALOG DIALOGEX 0, 0, 586, 345
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SelfRemember"
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "OK",IDOK,529,324,50,14
+    PUSHBUTTON      "Test",IDC_BUTTON_TEST,285,324,50,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_LIST_LAUNCH,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,7,36,572,272
+    PUSHBUTTON      "Import",IDC_BUTTON_IMPORT,73,324,50,14
+    PUSHBUTTON      "Export",IDC_BUTTON_EXPORT,7,324,50,14
+    PUSHBUTTON      "Create Table",IDC_BUTTON_CREATE_TABLE,127,14,50,14
+    PUSHBUTTON      "Edit Table",IDC_BUTTON_EDIT_TABLE,196,14,50,14,WS_DISABLED
+    COMBOBOX        IDC_COMBO_TABLES,34,14,82,219,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Table",IDC_STATIC_TABLE,8,16,18,8
+    PUSHBUTTON      "Delete Table",IDC_BUTTON_DELETE_TABLE,267,14,50,14,WS_DISABLED
+    PUSHBUTTON      "Option",IDC_BUTTON_USER_OPTION,220,324,50,14
+    PUSHBUTTON      "Change Password",IDC_BUTTON_CHANGE_PASSWORD,138,324,66,14
+    RTEXT           "Static",IDC_STATIC_INDICATOR,519,19,58,8
+END
+
+IDD_DIALOG_IMPORT_EXPORT DIALOGEX 0, 0, 251, 197
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ImportExport"
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_PASSWORD,74,36,46,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD_CONFIRM,192,36,46,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "Encrypt",IDC_CHECK_ENCRYPT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,180,40,10
+    EDITTEXT        IDC_EDIT_INI_FILE,35,16,182,14,ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "OK",IDOK,135,176,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,194,176,50,14
+    CONTROL         "",IDC_LIST_IMPORT_EXPORT,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,63,237,106
+    GROUPBOX        "",IDC_STATIC,7,5,237,53
+    LTEXT           "File",IDC_STATIC_FILE,12,19,15,8
+    LTEXT           "Password Protect",IDC_STATIC_PASSWORD_PROTECT,12,39,58,8
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSE,221,16,17,14
+    LTEXT           "Confirm Password",IDC_STATIC_CONFIRM,131,38,57,8
+    PUSHBUTTON      "All",IDC_BUTTON_ALL,60,176,50,14,WS_DISABLED
+    PUSHBUTTON      "Reload",IDC_BUTTON_RELOAD,189,36,50,14,NOT WS_VISIBLE | WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "SelfRemember MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "SelfRemember"
+            VALUE "LegalCopyright", "Copyright (C) 2012"
+            VALUE "OriginalFilename", "SelfRemember.EXE"
+            VALUE "ProductName", "SelfRemember Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SELFREMEMBER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 579
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 338
+    END
+
+    IDD_DIALOG_IMPORT_EXPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About TinyDB..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\SelfRemember.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
